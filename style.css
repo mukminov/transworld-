@@ -6,12 +6,14 @@
 
 html,body{
   height: 100%;
+  width: 100%;
 }
 
 .wrapper{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  width: 100%;
   min-width: 460px;
   height: 100%;
 }
@@ -24,7 +26,7 @@ html,body{
 	display: flex;
 	justify-content: space-between;
 	max-width: 960px;
-    margin: 0 auto;
+  margin: 0 auto;
 	border: 1px solid black;
 }
 
@@ -34,7 +36,7 @@ html,body{
 }
 
 .header-logo{
-	align-self: center;
+  align-self: center;
   margin-right: 25px;
 }
 
@@ -67,9 +69,9 @@ html,body{
 }
 
 .main-grid_960{
-  max-width: 960px;
-  margin: 0 auto;
-  border: 1px solid;
+	max-width: 960px;
+	margin: 0 auto;
+	border: 1px solid;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
@@ -87,46 +89,56 @@ html,body{
 }
 
 .aside{
- width: 960px; 
-
+  display: flex;
+  flex-direction: column;
 }
 
-.slaider{
+.slaider{ 
   display: flex;
   flex-grow: 1;
-  flex-direction:column;
-}
+  flex-shrink: 0;
+  flex-basis: auto;
+} 
 
 .slides{
-
-overflow: hidden;
-height: 480px;
+  height: 480px;
+  overflow: hidden;
+  width: 320px;
+/*display: none;*/
+ position: relative;
 }
 
 .aside-block{
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 40px;
+  justify-content: space-around;
+  padding: 20px;
   background-color: dimgrey;
+  height: 480px;
+  position: absolute;
 }
 
 #slide1{
-  height: 90%;
+  color: red;
+  background-color: grey;
+   justify-content: space-around;
+   height: 100%;
 }
 
 #slide2{
   color: red;
-  height: 90%;
   background-color: green;
+ justify-content: space-around;
+  height: 100%;
 }
 
 #slide3{
   color: red;
-  height: 90%;
   background-color: blue;
-}
+   justify-content: space-around;
+  height: 100%;
+ }
 
 .aside-block__header h2{
   font-size: 20px;
@@ -138,6 +150,10 @@ height: 480px;
   color: aliceblue;
 }
 
+.buttons{
+  text-align: center;
+}
+
 hr{
   width: 150px;
   height: 2px;
@@ -146,7 +162,9 @@ hr{
 
 .aside-block__navigation{ 
   display: flex;
-  flex:1;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: auto;
   justify-content: space-around;
   align-items: center;
   height: 100px;
@@ -223,11 +241,11 @@ hr{
 .block-main4{
   max-width: 960px;
   margin: 0 auto;
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .block-4{
-	display: flex;
+  display: flex;
   justify-content:center;
   margin: 20px;
 }
@@ -256,7 +274,7 @@ hr{
 }
 
 .block-5{ 
-	display: flex;
+  display: flex;
   justify-content:space-around;
   align-items:center;
   background-color:dimgrey;
@@ -268,7 +286,7 @@ hr{
 }
 
 aside a{
-	margin: 10px;
+  margin: 10px;
   color: aliceblue;
   text-decoration: none;
   font-size: 20px;
@@ -304,8 +322,8 @@ aside a{
 .aside-block2__button{
 	margin: 20px; 
 	padding: 10px; 
-  color: white; 
-  background-color: dimgrey;
+    color: white; 
+    background-color: dimgrey;
 	border-radius: 5px;
 	border: 2px solid black;
 }
@@ -347,22 +365,20 @@ aside a{
 .block-7{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   height: 800px;
   background: rgba(255,255,255, 0.7);
 }
 
-.block-7__image img{
-  padding-right: 25px;
-}
+
 
 .block-7info{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   width: 380px;
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .block7info__button{
@@ -419,13 +435,13 @@ aside a{
 }
 
 .aside-block3__header h1{
-	padding-bottom: 20px;
+  padding-bottom: 20px;
   font-size: 40px;
   color: aliceblue;
 }
 
 .aside-block3__header h3{
-	margin: 10px 0;
+  margin: 10px 0;
   color: aliceblue;
 }
 
@@ -456,10 +472,10 @@ aside a{
 
 .footer-grid_960{
   display: flex;
-	max-width: 960px;
+  max-width: 960px;
   margin: 0 auto;
-	border: 1px solid white;
   justify-content: space-between;
+  border: 1px solid white;
 }
 
 .footer-nav{
@@ -498,3 +514,86 @@ aside,.aside {
 	display: none;
 }
 
+@media screen  (max-width: 320px) and(min-width: 320px){
+	
+	.header {
+  display: flex;
+  height: 55px;
+  background-color: #000000;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  box-shadow: inset 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+	.nav__link{
+  display: block;
+  height: 56px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  line-height: 56px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #000000;
+  transition: background-color 0.1s linear, color 0.1s linear;
+}
+
+.nav__link:not(:first-of-type) {
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.nav__link:not(:last-of-type) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav__link:last-of-type {
+  box-shadow: inset 0 -5px 10px -5px rgba(0, 0, 0, 0.4);
+}
+.nav__link:hover {
+  background-color:  #404040;
+}
+.nav__link:active {
+  background-color: #1A37E4;
+  color: #fff;
+}
+.nav-burger {
+  display: block;
+  width: 25px;
+  height: 23px;
+  cursor: pointer;
+  color: transparent;
+  font-size: 0;
+  background: url("img/icon-menu.svg") no-repeat;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 1;
+}
+.nav-burger__checkbox {
+  display: none;
+}
+.nav-burger__checkbox:checked + .nav-burger {
+  background-image: url("img/icon-cross.svg");
+}
+.nav-burger__checkbox:checked ~ .nav {
+  display: block;
+}
+ input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+  display: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 1000px) {
+aside,.aside {
+	display: none;
+}
+}

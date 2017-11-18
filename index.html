@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>Document</title>
 		<link rel="stylesheet" href="style.css">
-       
-
+        <meta name="viewport" content="width=device-width, initial-scale=no">
+       <script src="index.js"></script>
 	</head>
 	<body>
         <div class="wrapper">
@@ -16,6 +16,8 @@
     						<img src="transworld skateboarding logo.jpg" alt="transworld skateboarding logo"> 
     					</div>
     				</div>
+                    <input class="nav-burger__checkbox" type="checkbox" id="burger">
+                    <label class="nav-burger" for="burger"></label>
     				<div class="header-nav">
     					<nav class="nav">
     						<a href="#" class="nav__link nav__link_first">Features</a>
@@ -29,7 +31,7 @@
     				<div class="header-nav">						
     					<nav class="nav">
     						<a href="#" class="nav__link2">My Card</a> 
-    						 <img class="logo-shopping" src="shopping-cart.png" alt="card logo">
+    						<img class="logo-shopping" src="shopping-cart.png" alt="card logo">
     					</nav>
                     </div>
 			    </div>
@@ -40,11 +42,8 @@
 					    <img src="tyler.jpg" alt="tyler image">
 						<aside class="aside">
 						    <div class="slaider">
-						    	<!--<input checked type="radio" name="slider" id="slide1">
-								<input type="radio" name="slider" id="slide2">
-								<input type="radio" name="slider" id="slide3">-->
-						    	<div class="slides" >
-			                        <div class="aside-block" id=slide1 >
+						    	<div class="slides">
+			                        <div class="aside-block" id="slide1" class="active" >
 			                            <div class="aside-block__header">
 			                                <h2>Features</h2>
 			                            	<h1>Readers<br> Choice<br>Awards</h1>
@@ -54,7 +53,7 @@
 			                            </div>
 			                            <h4 class="aside-block__link">Read more<a href="#">&rarr;</a></h4>
 			                        </div>    
-			                        <div class="aside-block" id=slide2>
+			                        <div class="aside-block" id="slide2" >
 			                           	<div class="aside-block__header">
 			                        	    <h2>Title</h2>
 			                            	<h1>Readers<br> Choice<br>Awards</h1>
@@ -64,7 +63,7 @@
 			                            </div>
 			                            <h4 class="aside-block__link">Read more<a href="#">&rarr;</a></h4>
 			                        </div>
-			                        <div class="aside-block" id=slide3>
+			                        <div class="aside-block" id="slide3">
 			                           	<div class="aside-block__header">
 			                        	    <h2>Title</h2>
 			                            	<h1>Readers<br> Choice<br>Awards</h1>
@@ -74,20 +73,14 @@
 			                            </div>
 			                            <h4 class="aside-block__link">Read more<a href="#">&rarr;</a></h4>
 			                        </div>
-			                    </div>   
-				                <div class="aside-block__navigation" id=controls>
-				                	<div id="controls">
-										<button id="slider-left">Prev</button>
-                                        <button id="slider-right">Next</button>
-									</div>
-                                    
-				                    <!--<label ><h3>Prev</h3><a href="#slide1">&#8592;</a></label>
-				                    <label ><h3>Next</h3><a href="#slide2">&rarr;</a></label>-->
-				                    <!--<label for="slide1" id="slide1"></label>
-									<label for="slide2" id="slide2"></label>
-									<label for="slide3" id="slide3"></label>*/-->
-				                </div> 
-			                </div>            	
+			                    </div>  
+                            </div> 
+				            <div class="aside-block__navigation" >
+				            	<div class="buttons">
+									<button id="btn-prev" value=Prev>Prev</button>
+                                    <button id="btn-next" value=Next>Next</button>
+								</div>
+				            </div> 
 						</aside>
 					</div>
 				</div>
