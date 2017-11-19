@@ -1,5 +1,5 @@
 window.onload = function(){
-	var slides = document.querySelectorAll( " .slides .aside-block ");
+	var slides = document.querySelectorAll( "  #slaider .slides .aside-block ");
 	var i = 0;
 
 	document.getElementById("btn-prev").onclick = function(){

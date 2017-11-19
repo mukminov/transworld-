@@ -7,6 +7,9 @@
 html,body{
   height: 100%;
   width: 100%;
+  background-image: url(textyre.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .wrapper{
@@ -20,6 +23,8 @@ html,body{
 
 .header{
 	background-color: white;
+  opacity: 0.7;
+  border: 1px solid black;
 }
 
 .header-grid_960{
@@ -93,7 +98,7 @@ html,body{
   flex-direction: column;
 }
 
-.slaider{ 
+#slaider{ 
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
@@ -467,6 +472,7 @@ aside a{
   flex-grow: 0;
   flex-basis: auto;
   background-color: #000000;
+  opacity: 0.7;
   border: 1px solid white;
 }
 
